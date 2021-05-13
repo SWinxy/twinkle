@@ -564,8 +564,8 @@ Twinkle.tag.article.tagList = {
 				}
 			},  // has a subgroup with text input
 			{
-				tag: 'Cleanup rewrite',
-				description: "needs to be rewritten entirely to comply with Wikipedia's quality standards"
+				tag: 'Cleanup AfD',
+				description: 'requires cleaning up due to a closed deletion discussion'
 			},
 			{
 				tag: 'Copy edit',
@@ -578,9 +578,14 @@ Twinkle.tag.article.tagList = {
 					tooltip: 'e.g. "consistent spelling". Optional.',
 					size: 35
 				}
-			}  // has a subgroup with text input
+			},  // has a subgroup with text input
+			{
+				tag: 'Cleanup rewrite',
+				description: "needs to be rewritten entirely to comply with Wikipedia's quality standards"
+			}
 		],
 		'Potentially unwanted content': [
+			{ tag: 'Cleanup list', description: 'contains embedded lists that may be poorly defined, unverified, or indescriminate' },
 			{
 				tag: 'Close paraphrasing',
 				description: 'contains close paraphrasing of a non-free copyrighted source',
@@ -592,6 +597,7 @@ Twinkle.tag.article.tagList = {
 					tooltip: 'Source that has been closely paraphrased'
 				}
 			},
+			{ tag: 'Cleanup red links', description: 'use of red links may not follow Wikipedia\'s guidelines' },
 			{
 				tag: 'Copypaste',
 				description: 'appears to have been copied and pasted from another location',
@@ -605,11 +611,24 @@ Twinkle.tag.article.tagList = {
 					size: 50
 				}
 			},  // has a subgroup with text input
+			{ tag: 'Criticism section', description: 'article\'s criticism or controversy section may comprimise the article\'s NPOV' },
 			{ tag: 'External links', description: 'external links may not follow content policies or guidelines' },
-			{ tag: 'Non-free', description: 'may contain excessive or improper use of copyrighted materials' }
+			{ tag: 'In popular culture', description: 'article appears to have trivial, minor, or unrelated references to popular culture' },
+			{ tag: 'MOS', description: 'article needs editing according to Wikipedia\'s Manual of Style' },
+			{ tag: 'Non-free', description: 'may contain excessive or improper use of copyrighted materials' },
+			{ tag: 'Overlinked', description: 'article may have too many links to other articles' },
+// 			{ tag: 'Schedule', description: 'article contains a television or radio schedule' },
+			{ tag: 'Trivia', description: 'article contains a list of miscellaneous information' }
 		],
 		'Structure, formatting, and lead section': [
 			{ tag: 'Cleanup reorganize', description: "needs reorganization to comply with Wikipedia's layout guidelines" },
+			duplication
+			overcolored
+			summarize section
+			too many see alsos
+			improve lead
+			lead extra info
+			pov lead
 			{ tag: 'Lead missing', description: 'no lead section' },
 			{ tag: 'Lead rewrite', description: 'lead section needs to be rewritten to comply with guidelines' },
 			{ tag: 'Lead too long', description: 'lead section is too long for the length of the article' },
@@ -656,6 +675,23 @@ Twinkle.tag.article.tagList = {
 			}
 		],
 		'Style of writing': [
+			abbreviations
+			buzzword
+			cleanup tense
+			debate
+			example farm
+			how-to
+			innapropriate person
+			obituary
+			peacock
+			pro and con list
+			repetition
+			research paper
+			review
+			speculation
+			story
+			travel guide
+			verbosity
 			{ tag: 'Advert', description: 'written like an advertisement' },
 			{ tag: 'Cleanup tense', description: 'does not follow guidelines on use of different tenses.' },
 			{ tag: 'Essay-like', description: 'written like a personal reflection, personal essay, or argumentative essay' },
