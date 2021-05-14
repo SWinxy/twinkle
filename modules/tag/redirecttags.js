@@ -3,25 +3,30 @@ Twinkle.tag.redirectList = {
 	'Grammar, punctuation, and spelling': {
 		'Abbreviation': [
 			{ tag: 'R from/to acronym', description: 'redirect from an acronym (often spoken as a single word, e.g. POTUS)', fromto },
-			{ tag: 'R from/to initialism', description: 'redirect from an initialism to its expanded form (often pronounced letter-by-letter, e.g. AGF)', fromto },
-			{ tag: 'R from MathSciNet abbreviation', description: 'redirect from MathSciNet publication title abbreviation to the unabbreviated title' },
-			{ tag: 'R from NLM abbreviation', description: 'redirect from a NLM publication title abbreviation to the unabbreviated title' },
-			{ tag: 'R from numeronym', description: 'redirect from a numeronym to a related topic (number-based word, e.g. K9)' },
 			{ tag: 'R from Bluebook abbreviation', description: 'redirect from a Bluebook standardized abbreviation' },
-			{ tag: 'R from ISO 4 abbreviation', description: 'redirect from an ISO 4 publication title abbreviation' }
+			{ tag: 'R from/to initialism', description: 'redirect from an initialism to its expanded form (often pronounced letter-by-letter, e.g. AGF)', fromto },
+			{ tag: 'R from ISO 4 abbreviation', description: 'redirect from an ISO 4 publication title abbreviation' },
+			{ tag: 'R from MathSciNet abbreviation', description: 'redirect from MathSciNet publication title abbreviation to the unabbreviated title' },
+			{ tag: 'R from numeronym', description: 'redirect from a numeronym to a related topic (number-based word, e.g. K9)' },
+			{ tag: 'R from NLM abbreviation', description: 'redirect from a NLM publication title abbreviation to the unabbreviated title' },
+			{ tag: 'R from systematic abbreviation', description: 'redirect from a systematic abbreviation' }
 		],
 		'Capitalisation': [
 			{ tag: 'R from CamelCase', description: 'redirect from a CamelCase title' },
+			{ tag: 'R from miscapitalisation', description: 'redirect from a capitalisation error' },
 			{ tag: 'R from other capitalisation', description: 'redirect from a title with another method of capitalisation' },
-			{ tag: 'R from miscapitalisation', description: 'redirect from a capitalisation error' }
 		],
 		'Grammar & punctuation': [
 			{ tag: 'R from modification', description: 'redirect from a modification of the target\'s title, such as with words rearranged' },
+			// { tag: 'R from rearrangement' }, // redirects to modification
 			{ tag: 'R from/to plural', description: 'redirect from a plural word to the singular equivalent or from a singular noun to its plural form', fromto }
+			// from alternative punctuation -> alternative spelling
+			// from alternative hyphenation -> alt spelling
+			// from alternative spacing -> alt spelling
 		],
 		'Parts of speech': [
-			{ tag: 'R from verb', description: 'redirect from an English-language verb or verb phrase' },
 			{ tag: 'R from adjective', description: 'redirect from an adjective (word or phrase that describes a noun)' },
+			{ tag: 'R from adverb', description: 'redirect from an adverb or adverbial phrase, which modifies a verb, an adjective or another adverb' },
 			{ tag: 'R from common noun', description: 'redirect from a common noun (person, place, or thing)'},
 			{ tag: 'R from gerung', description: 'redirect from a gerung–a verb that ends in \'ing\' that functions as a noun' },
 			{ tag: 'R from proper noun', description: 'redirect from a proper noun–a noun that begins with an uppercase letter' },
@@ -29,6 +34,7 @@ Twinkle.tag.redirectList = {
 		],
 		'Spelling': [
 			{ tag: 'R from alternative spelling', description: 'redirect from a title with a different spelling, punctuation, or hyphenation' },
+			{ tag: 'R from alternative translation', description: 'redirect from an alternative English transliteration to a more common variation' },
 			{ tag: 'R from alternative transliteration', description: 'redirect from an alternative English transliteration to a more common variation' },
 			{ tag: 'R from American English', description: 'redirect from a term in American English spelling to an alternate spelling variation' },
 			{ tag: 'R from/to ASCII-only', description: 'redirect from a title in only basic ASCII to the formal title, with differences that are not diacritical marks or ligatures or vise versa', fromto },
@@ -93,16 +99,19 @@ Twinkle.tag.redirectList = {
 			{ tag: 'R from surname', description: 'redirect from a title that is a surname' }
 		],
 		Technical: [
+			{ tag: 'R from ATC code', description: 'redirect from a title that is an ATC code to an article about a pharmaceutical drug' },
+			{ tag: 'R from ATCvet code', description: 'redirect from a title that is an ATCvet code to an article about a veterinary drug' },
 			{ tag: 'R from CAS Registry Number', description: 'redirect from a CAS Registry Number to its subject\'s article in mainspace' },
 			{ tag: 'R from citation identifier', description: 'redirect from a citation identifier (e.g. ISBN)' },
 			{ tag: 'R from drug trade name', description: 'redirect from (or to) the trade name of a drug to (or from) the international nonproprietary name (INN)' },
 			{ tag: 'R from filename', description: 'redirect from a title that is a filename of the target' },
 			{ tag: 'R from Java package name', description: 'redirect from a Java package name, class, or interface, to the software project or language feature that provides that package, or the computer science concept that it implements' },
-			{ tag: 'R from molecular formula', description: 'redirect from a molecular/chemical formula to its technical or trivial name' },
+			{ tag: 'R from chemical formula', description: 'redirect from a chemical/molecular formula to its systematic (technical) or trivial name' },
 			{ tag: 'R from gene symbol', description: 'redirect from a Human Genome Organisation (HUGO) symbol for a gene to an article about the gene' },
 			{ tag: 'R from/to technical name', description: 'redirect from a more technical name to a common name or vise versa', fromto }
 		],
 		Organisms: [
+			{ tag: 'R from animal', description: 'redirect from one or more animals to a related main topic that describes the animal(s)' },
 			{ tag: 'R from/to scientific name', description: 'redirect from the common name to the scientific name or vise versa', fromto },
 			{ tag: 'R from alternative scientific name', description: 'redirect from an alternative scientific name to the accepted scientific name' },
 			{ tag: 'R from scientific abbreviation', description: 'redirect from a scientific abbreviation' },
@@ -112,7 +121,8 @@ Twinkle.tag.redirectList = {
 		Geography: [
 			{ tag: 'R from name and country', description: 'redirect from the specific name to the briefer name' },
 			{ tag: 'R from more specific geographic name', description: 'redirect from a geographic location that includes extraneous identifiers such as the county or region of a city' },
-			{ tag: 'R from postal code', description: 'redirect from a postal code to its assigned geographic area' }
+			{ tag: 'R from postal code', description: 'redirect from a postal code to its assigned geographic area' },
+			{ tag: 'R from postal abbreviation', description: 'redirect from a postal abbreviation to its associated city, state or other geographic entity' }
 		]
 	},
 	'Navigation aids': {
@@ -142,11 +152,11 @@ Twinkle.tag.redirectList = {
 			{ tag: 'R from incomplete disambiguation', description: 'redirect from a page name that is too ambiguous to be the title of an article and should redirect to an appropriate disambiguation page' },
 			{ tag: 'R from incorrect disambiguation', description: 'redirect from a page name with incorrect disambiguation due to an error or previous editorial misconception' },
 			{ tag: 'R from other disambiguation', description: 'redirect from a page name with an alternative disambiguation qualifier' },
-			{ tag: 'R from predictable disambiguation', description: '' },
+			{ tag: 'R from predictable disambiguation', description: 'redirect from a page name with parenthetical disambiguation' },
 			{ tag: 'R from unnecessary disambiguation', description: 'redirect from a page name that has an unneeded disambiguation qualifier' }
 		],
 		'Merge, duplicate & move': [
-			{ tag: 'R from draft', description: '' },
+			{ tag: 'R from draft', description: 'redirect from a page in the draft namespace (drafts) to an article in mainspace' },
 			{ tag: 'R from duplicated article', description: 'redirect to a similar article in order to preserve its edit history' },
 			{ tag: 'R with history', description: 'redirect from a page containing substantive page history, kept to preserve content and attributions' },
 			{ tag: 'R from move', description: 'redirect from a page that has been moved/renamed' },
@@ -168,12 +178,13 @@ Twinkle.tag.redirectList = {
 	},
 	'Media': {
 		General: [
+			{ tag: 'R from brand name', description: 'redirect from a brand name to a generic name' },
 			{ tag: 'R from book', description: 'redirect from a book title to a more general, relevant article' },
 			{ tag: 'R from film', description: 'redirect from a film title that is a subtopic of the redirect target or a title in an alternative language that has been produced in that language' },
 			{ tag: 'R from upcoming film', description: 'redirect from a title that potentially could be expanded into a new article or other type of associated page' },
 			{ tag: 'R from journal', description: 'redirect from a trade or professional journal article to a more general, relevant Wikipedia article' },
-			{ tag: 'R from meme ', description: 'redirect from a name of an internet meme or other pop culture phenomenon that is a subtopic of the redirect target' },
-			{ tag: 'R from work ', description: 'redirect from a creative work to a related topic such as the author/artist, publisher, or a subject related to the work' },
+			{ tag: 'R from meme', description: 'redirect from a name of an internet meme or other pop culture phenomenon that is a subtopic of the redirect target' },
+			{ tag: 'R from work', description: 'redirect from a creative work to a related topic such as the author/artist, publisher, or a subject related to the work' },
 			{ tag: 'R from album', description: 'redirect from an album to a related topic such as the recording artist or a list of albums' },
 			{ tag: 'R from lyric', description: 'redirect from a lyric to a song or other source that describes the lyric' },
 			{ tag: 'R from song', description: 'redirect from a song title to a more general, relevant article' },
@@ -183,7 +194,9 @@ Twinkle.tag.redirectList = {
 		Fiction: [
 			{ tag: 'R from fictional character', description: 'redirect from a fictional character to a related fictional work or list of characters' },
 			{ tag: 'R from fictional element', description: 'redirect from a fictional element (such as an object or concept) to a related fictional work or list of similar elements' },
-			{ tag: 'R from fictional location', description: 'redirect from a fictional location or setting to a related fictional work or list of places' }
+			{ tag: 'R from fictional location', description: 'redirect from a fictional location or setting to a related fictional work or list of places' },
+			{ tag: 'R ME from alternative name', description: 'redirect from an alternative article title of a Middle-earth related topic ' },
+			{ tag: 'R ME from alternative spelling', description: 'redirect from an alternative article title of a Middle-earth related topic ' }
 
 		],
 		Comics: [
@@ -198,7 +211,13 @@ Twinkle.tag.redirectList = {
 	},
 	'Miscellaneous': {
 		'Related information': [
+			{ tag: 'R from airline code', description: 'redirect from an airline code (IATA, ICAO, or call sign)' },
+			{ tag: 'R from airport code', description: 'redirect from an airport letter code or location identifier, such as IATA or ICAO' },
+			{ tag: 'R from alternative military designation', description: 'redirect from an alternative military designation to a more common military designation of an aircraft, vehicle, or other item' },
 			{ tag: 'R to article without mention', description: 'redirect to an article without any mention of the redirected word or phrase' },
+			{ tag: 'R from bus route', description: 'redirect from a bus route' },
+			{ tag: 'R from London bus route', description: 'redirect from a London area bus route' },
+			{ tag: 'R from NYC bus route', description: 'redirect from a New York City bus route' },
 			{ tag: 'R to decade', description: 'redirect from a year to the decade article' },
 			{ tag: 'R to century', description: 'redirect from a year or decade to the associated century article' },
 			{ tag: 'R from domain name', description: 'redirect from a domain name to an article about a website' },
@@ -214,7 +233,6 @@ Twinkle.tag.redirectList = {
 			{ tag: 'R from spouse', description: 'redirect from the name of a person\'s spouse or former spouse to the article about the person' },
 			{ tag: 'R from school', description: 'redirect from a school article that had very little information' },
 			{ tag: 'R from/to subtopic', description: 'redirect from a title that is a subtopic of the target article' },
-			{ tag: 'R to subtopic', description: 'redirect to a subtopic of the redirect\'s title' },
 			{ tag: 'R from team', description: 'redirect from a team/club/squad to the sporting league/association in which the team is a member' },
 			{ tag: 'R from Unicode character', description: 'redirect from a single Unicode character to an article or Wikipedia project page that infers meaning for the symbol' },
 			{ tag: 'R from Unicode code', description: 'redirect from a Unicode code point to an article about the character it represents' },
