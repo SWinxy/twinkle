@@ -73,6 +73,7 @@ Twinkle.tag.redirectList = {
 			{ tag: 'R from alternative name', description: 'redirect from a title that is another name, a pseudonym, a nickname, or a synonym' },
 			{ tag: 'R from ambiguous sort name', description: 'redirect from an ambiguous sort name to a page or list that disambiguates it' },
 			{ tag: 'R from antonym', description: 'redirect from a page that is an antonym or opposite of the target page' },
+			{ tag: 'R from eponym', description: 'redirect from an eponym' },
 			{ tag: 'R from former name', description: 'redirect from a former name or working title no longer known by that name' },
 			{ tag: 'R from incomplete name', description: 'R from incomplete name' },
 			{ tag: 'R from incorrect name', description: 'redirect from an erroneus name that is unsuitable as a title' },
@@ -102,12 +103,17 @@ Twinkle.tag.redirectList = {
 			{ tag: 'R from ATC code', description: 'redirect from a title that is an ATC code to an article about a pharmaceutical drug' },
 			{ tag: 'R from ATCvet code', description: 'redirect from a title that is an ATCvet code to an article about a veterinary drug' },
 			{ tag: 'R from CAS Registry Number', description: 'redirect from a CAS Registry Number to its subject\'s article in mainspace' },
-			{ tag: 'R from citation identifier', description: 'redirect from a citation identifier (e.g. ISBN)' },
-			{ tag: 'R from drug trade name', description: 'redirect from (or to) the trade name of a drug to (or from) the international nonproprietary name (INN)' },
-			{ tag: 'R from filename', description: 'redirect from a title that is a filename of the target' },
-			{ tag: 'R from Java package name', description: 'redirect from a Java package name, class, or interface, to the software project or language feature that provides that package, or the computer science concept that it implements' },
 			{ tag: 'R from chemical formula', description: 'redirect from a chemical/molecular formula to its systematic (technical) or trivial name' },
+			{ tag: 'R from citation identifier', description: 'redirect from a citation identifier (e.g. ISBN)' },
+			{ tag: 'R from code', description: 'redirect from a code that has no distinctive category to which it may be sorted' },
+			{ tag: 'R from DOI prefix', description: 'redirect from a DOI prefix to the associated registrant (typically a publisher or imprint)' },
+			{ tag: 'R from drug trade name', description: 'redirect from (or to) the trade name of a drug to (or from) the international nonproprietary name (INN)' },
+			{ tag: 'R from E number', description: 'redirect from an E number' },
+			{ tag: 'R from E2 symmetry', description: 'redirect from an E2 symmetry to an article section of a Euclidean tiling on its symmetry' },
+			{ tag: 'R from filename', description: 'redirect from a title that is a filename of the target' },
 			{ tag: 'R from gene symbol', description: 'redirect from a Human Genome Organisation (HUGO) symbol for a gene to an article about the gene' },
+			{ tag: 'R from Java package name', description: 'redirect from a Java package name, class, or interface, to the software project or language feature that provides that package, or the computer science concept that it implements' },
+			{ tag: 'R from mathematical expression', description: 'redirect from a mathematical symbol or expression to a target article about the symbol or expression' },
 			{ tag: 'R from/to technical name', description: 'redirect from a more technical name to a common name or vise versa', fromto }
 		],
 		Organisms: [
@@ -119,10 +125,19 @@ Twinkle.tag.redirectList = {
 			{ tag: 'R taxon with possibilities', description: 'redirect from a title related to a living organism that potentially could be expanded into an article' }
 		],
 		Geography: [
+			{ tag: 'R from calling code', description: 'redirect from a title that is a country calling code to its associated telephone/country article' },
+			{ tag: 'R from Canadian settlement name', description: 'redirect from an article title related to a Canadian settlement' },
+			{ tag: 'R from city and province', description: 'redirect from a geographic location that uses the format "city, province"' },
+			{ tag: 'R from city and state', description: 'redirect from a geographic location that uses the format "city, state"' },
 			{ tag: 'R from name and country', description: 'redirect from the specific name to the briefer name' },
 			{ tag: 'R from more specific geographic name', description: 'redirect from a geographic location that includes extraneous identifiers such as the county or region of a city' },
 			{ tag: 'R from postal code', description: 'redirect from a postal code to its assigned geographic area' },
 			{ tag: 'R from postal abbreviation', description: 'redirect from a postal abbreviation to its associated city, state or other geographic entity' }
+		],
+		Other: [
+			{ tag: 'R from case citation', description: 'redirect from a legal case citation' },
+			{ tag: 'R from company name', description: 'redirect from a company name' },
+			{ tag: 'R from predecessor company name', description: 'rredirect from the name of a former company to a successor company' },
 		]
 	},
 	'Navigation aids': {
@@ -139,7 +154,9 @@ Twinkle.tag.redirectList = {
 				}
 			},
 			{ tag: 'R from category navigation', description: 'redirect from a category that is used as a navigational aid to the target category' },
+			{ tag: 'R from demonym', description: 'redirect from a term that denotes the inhabitants of a target place' },
 			{ tag: 'R from file metadata link', description: 'redirect of a wikilink created from EXIF, XMP, or other information (i.e. the "metadata" section on some image description pages)' },
+			{ tag: 'R for convenience', description: 'redirect from a title that is intended to make it easier to get to the target page' },
 			{ tag: 'R to list entry', description: 'redirect to a list which contains brief descriptions of subjects not notable enough to have separate articles' },
 			{ tag: 'R mentioned in hatnote', description: 'redirect from a title that is mentioned in a hatnote at the redirect target' },
 			{ tag: 'R to section', description: 'similar to {{R to list entry}}, but when list is organized in sections, such as list of characters in a fictional universe' },
@@ -185,9 +202,6 @@ Twinkle.tag.redirectList = {
 			{ tag: 'R from journal', description: 'redirect from a trade or professional journal article to a more general, relevant Wikipedia article' },
 			{ tag: 'R from meme', description: 'redirect from a name of an internet meme or other pop culture phenomenon that is a subtopic of the redirect target' },
 			{ tag: 'R from work', description: 'redirect from a creative work to a related topic such as the author/artist, publisher, or a subject related to the work' },
-			{ tag: 'R from album', description: 'redirect from an album to a related topic such as the recording artist or a list of albums' },
-			{ tag: 'R from lyric', description: 'redirect from a lyric to a song or other source that describes the lyric' },
-			{ tag: 'R from song', description: 'redirect from a song title to a more general, relevant article' },
 			{ tag: 'R from television episode', description: 'redirect from a television episode title to a related work or lists of episodes' },
 			{ tag: 'R from television program', description: 'redirect from a title of television program, television series or web series that is a subtopic of the redirect target.' }
 		],
@@ -195,9 +209,16 @@ Twinkle.tag.redirectList = {
 			{ tag: 'R from fictional character', description: 'redirect from a fictional character to a related fictional work or list of characters' },
 			{ tag: 'R from fictional element', description: 'redirect from a fictional element (such as an object or concept) to a related fictional work or list of similar elements' },
 			{ tag: 'R from fictional location', description: 'redirect from a fictional location or setting to a related fictional work or list of places' },
-			{ tag: 'R ME from alternative name', description: 'redirect from an alternative article title of a Middle-earth related topic ' },
-			{ tag: 'R ME from alternative spelling', description: 'redirect from an alternative article title of a Middle-earth related topic ' }
-
+			{ tag: 'R ME from alternative name', description: 'redirect from an alternative article title of a Middle-earth related topic' },
+			{ tag: 'R ME from alternative spelling', description: 'redirect from an alternative article title of a Middle-earth related topic' },
+			{ tag: 'R ME from duplicated article', description: 'redirect from a page on the same or very similar subject matter related to the Middle-earth legendarium' },
+			{ tag: 'R ME without diacritics', description: 'redirect from essentially the same Middle-earth page name that does not have diacritical marks' },
+		],
+		Music: [
+			{ tag: 'R from album', description: 'redirect from an album to a related topic such as the recording artist or a list of albums' },
+			{ tag: 'R from cover song', description: 'redirect from a cover version of a song to the article about the original song' },
+			{ tag: 'R from lyric', description: 'redirect from a lyric to a song or other source that describes the lyric' },
+			{ tag: 'R from song', description: 'redirect from a song title to a more general, relevant article' },
 		],
 		Comics: [
 			{ tag: 'R comics with possibilities', description: 'redirect from a comics-related title that potentially could be expanded into an article' },
@@ -216,6 +237,7 @@ Twinkle.tag.redirectList = {
 			{ tag: 'R from alternative military designation', description: 'redirect from an alternative military designation to a more common military designation of an aircraft, vehicle, or other item' },
 			{ tag: 'R to article without mention', description: 'redirect to an article without any mention of the redirected word or phrase' },
 			{ tag: 'R from bus route', description: 'redirect from a bus route' },
+			{ tag: 'R from catchphrase', description: 'redirect from a catchphrase to an article or section of an article about the catchphrase' },
 			{ tag: 'R from London bus route', description: 'redirect from a London area bus route' },
 			{ tag: 'R from NYC bus route', description: 'redirect from a New York City bus route' },
 			{ tag: 'R to decade', description: 'redirect from a year to the decade article' },
