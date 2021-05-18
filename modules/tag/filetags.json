@@ -1,0 +1,149 @@
+{
+	"License and sourcing problem tags": [
+		{ "tag": "Better source requested", "description": "source info consists of bare image URL/generic base URL only" },
+		{ "tag": "Non-free reduce", "description": "non-low-resolution fair use image (or too-long audio clip, etc)" },
+		{ "tag": "Orphaned non-free revisions", "description": "fair use media with old revisions that need to be deleted" }
+	],
+	"Wikimedia Commons-related tags": [
+		{ "tag": "Copy to Commons", "description": "free media that should be copied to Commons" },
+		{
+			"tag": "{{Do not move to Commons}}: file not suitable for moving to Commons",
+			"description": "Do not move to Commons",
+			"subgroup": [
+				{
+					"type": "input",
+					"name": "DoNotMoveToCommons_reason",
+					"tag": "Reason: ",
+					"tooltip": "Enter the reason why this image should not be moved to Commons (required). If the file is PD in the US but not in country of origin, enter 'US only'",
+					"required": true
+				},
+				{
+					"type": "number",
+					"name": "DoNotMoveToCommons_expiry",
+					"tag": "Expiration year: ",
+					"tooltip": "If this file can be moved to Commons beginning in a certain year, you can enter it here (optional)."
+				}
+			]
+		},
+		{
+			"tag": "{{Keep local}}: request to keep local copy of a Commons file",
+			"description": "Keep local",
+			"subgroup": {
+				"type": "input",
+				"name": "keeplocalName",
+				"tag": "Commons image name if different: ",
+				"tooltip": "Name of the image on Commons (if different from local name), excluding the File: prefix:"
+			}
+		},
+		{
+			"tag": "{{Now Commons}}: file has been copied to Commons",
+			"description": "Now Commons",
+			"subgroup": {
+				"type": "input",
+				"name": "nowcommonsName",
+				"tag": "Commons image name if different: ",
+				"tooltip": "Name of the image on Commons (if different from local name), excluding the File: prefix:"
+			}
+		}
+	],
+	"Cleanup tags": [
+		{ "tag": "{{Artifacts}}: PNG contains residual compression artifacts", "description": "Artifacts" },
+		{ "tag": "{{Bad font}}: SVG uses fonts not available on the thumbnail server", "description": "Bad font" },
+		{ "tag": "{{Bad format}}: PDF/DOC/... file should be converted to a more useful format", "description": "Bad format" },
+		{ "tag": "{{Bad GIF}}: GIF that should be PNG, JPEG, or SVG", "description": "Bad GIF" },
+		{ "tag": "{{Bad JPEG}}: JPEG that should be PNG or SVG", "description": "Bad JPEG" },
+		{ "tag": "{{Bad SVG}}: SVG containing raster graphics", "description": "Bad SVG" },
+		{ "tag": "{{Bad trace}}: auto-traced SVG requiring cleanup", "description": "Bad trace" },
+		{
+			"tag": "{{Cleanup image}}: general cleanup", "description": "Cleanup image",
+			"subgroup": {
+				"type": "input",
+				"name": "cleanupimageReason",
+				"tag": "Reason: ",
+				"tooltip": "Enter the reason for cleanup (required)",
+				"required": true
+			}
+		},
+		{ "tag": "{{ClearType}}: image (not screenshot) with ClearType anti-aliasing", "description": "ClearType" },
+		{ "tag": "{{Imagewatermark}}: image contains visible or invisible watermarking", "description": "Imagewatermark" },
+		{ "tag": "{{NoCoins}}: image using coins to indicate scale", "description": "NoCoins" },
+		{ "tag": "{{Overcompressed JPEG}}: JPEG with high levels of artifacts", "description": "Overcompressed JPEG" },
+		{ "tag": "{{Opaque}}: opaque background should be transparent", "description": "Opaque" },
+		{ "tag": "{{Remove border}}: unneeded border, white space, etc.", "description": "Remove border" },
+		{
+			"tag": "{{Rename media}}: file should be renamed according to the criteria at [[WP:FMV]]",
+			"description": "Rename media",
+			"subgroup": [
+				{
+					"type": "input",
+					"name": "renamemediaNewname",
+					"tag": "New 'name': ",
+					"tooltip": "Enter the new name for the image (optional)"
+				},
+				{
+					"type": "input",
+					"name": "renamemediaReason",
+					"tag": "Reason: ",
+					"tooltip": "Enter the reason for the rename (optional)"
+				}
+			]
+		},
+		{ "tag": "{{Should be PNG}}: GIF or JPEG should be lossless", "description": "Should be PNG" },
+		{
+			"tag": "{{Should be SVG}}: PNG, GIF or JPEG should be vector graphics", "description": "Should be SVG",
+			"subgroup": {
+				"name": "svgCategory",
+				"type": "select",
+				"list": [
+					{ "tag": "{{Should be SVG|other}}", "description": "other" },
+					{ "tag": "{{Should be SVG|alphabet}}: character images, font examples, etc.", "description": "alphabet" },
+					{ "tag": "{{Should be SVG|chemical}}: chemical diagrams, etc.", "description": "chemical" },
+					{ "tag": "{{Should be SVG|circuit}}: electronic circuit diagrams, etc.", "description": "circuit" },
+					{ "tag": "{{Should be SVG|coat of arms}}: coats of arms", "description": "coat of arms" },
+					{ "tag": "{{Should be SVG|diagram}}: diagrams that do not fit any other subcategory", "description": "diagram" },
+					{ "tag": "{{Should be SVG|emblem}}: emblems, free/libre logos, insignias, etc.", "description": "emblem" },
+					{ "tag": "{{Should be SVG|fair use}}: fair-use images, fair-use logos", "description": "fair use" },
+					{ "tag": "{{Should be SVG|flag}}: flags", "description": "flag" },
+					{ "tag": "{{Should be SVG|graph}}: visual plots of data", "description": "graph" },
+					{ "tag": "{{Should be SVG|logo}}: logos", "description": "logo" },
+					{ "tag": "{{Should be SVG|map}}: maps", "description": "map" },
+					{ "tag": "{{Should be SVG|music}}: musical scales, notes, etc.", "description": "music" },
+					{ "tag": "{{Should be SVG|physical}}: 'realistic' images of physical objects, people, etc.", "description": "physical" },
+					{ "tag": "{{Should be SVG|symbol}}: miscellaneous symbols, icons, etc.", "description": "symbol" }
+				]
+			}
+		},
+		{ "tag": "{{Should be text}}: image should be represented as text, tables, or math markup", "description": "Should be text" }
+	],
+	"Image quality tags": [
+		{ "tag": "{{Image hoax}}: Image may be manipulated or constitute a hoax", "description": "Image hoax" },
+		{ "tag": "{{Image-blownout}}", "description": "Image-blownout" },
+		{ "tag": "{{Image-out-of-focus}}", "description": "Image-out-of-focus" },
+		{
+			"tag": "{{Image-Poor-Quality}}", "description": "Image-Poor-Quality",
+			"subgroup": {
+				"type": "input",
+				"name": "ImagePoorQualityReason",
+				"tag": "Reason: ",
+				"tooltip": "Enter the reason why this image is so bad (required)",
+				"required": true
+			}
+		},
+		{ "tag": "{{Image-underexposure}}", "description": "Image-underexposure" },
+		{
+			"tag": "{{Low quality chem}}: disputed chemical structures", "description": "Low quality chem",
+			"subgroup": {
+				"type": "input",
+				"name": "lowQualityChemReason",
+				"tag": "Reason: ",
+				"tooltip": "Enter the reason why the diagram is disputed (required)",
+				"required": true
+			}
+		}
+	],
+	"Replacement tags": [
+		{ "tag": "{{Obsolete}}: improved version available", "description": "Obsolete" },
+		{ "tag": "{{PNG version available}}", "description": "PNG version available" },
+		{ "tag": "{{Vector version available}}", "description": "Vector version available" }
+	]
+}
